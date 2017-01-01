@@ -1,13 +1,13 @@
 (function(){
 
-    var main = document.getElementById("main");
-    var tr_c = main.contentDocument.getElementsByTagName("tr").length - 14;
-    for (i=0;i<tr_c;i++){
-        document.getElementById("main").contentDocument.getElementsByName("radio"+i)[0].checked = true;
-    }
-    document.getElementById("main").contentDocument.getElementsByName("radio"+(tr_c-1))[1].checked = true;
-    for (i=0;i<4;i++){
-        document.getElementById("main").contentDocument.getElementsByName("radio_s"+i)[1].checked = true;
-    }
+    var tr = document.getElementsByClassName("tr-xspj"),
+    	tr_l = tr.length;
 
+    for(var i = 0 ; i < tr_l - 1 ; i++){
+        tr[i].querySelectorAll(".radio-pjf")[0].checked = true;
+    }
+    
+    tr[tr_l - 2].querySelectorAll(".radio-pjf")[1].checked = true;
+
+    alert("评课成功！")
 })();
